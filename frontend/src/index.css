@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.leaflet-container {
+  border-radius: 0.75rem;
+  z-index: 0;
+}
+
+/* Keep our dropdowns above Leaflet panes (Leaflet uses z-index up to 400). */
+.leaflet-pane,
+.leaflet-top,
+.leaflet-bottom {
+  z-index: 0;
+}
+.leaflet-control {
+  z-index: 10;
+}
+.autocomplete-dropdown {
+  z-index: 50;
+}
